@@ -1,0 +1,122 @@
+---
+title: Customization and Settings
+description: Learn how to configure your documentation space, including themes, branding, and access controls to suit your project's needs.
+---
+
+## Overview
+
+Customize your danny chan Documentation space to match your project's identity and requirements. Adjust themes, set brand colors like `#3B82F6`, manage user permissions, and handle exports or imports seamlessly. These settings ensure your docs align with your branding and team workflow.
+
+<Columns cols={3}>
+  <Card title="Themes & Branding" icon="palette" href="#themes">
+    Tailor colors and styles to reflect your brand.
+  </Card>
+  <Card title="Permissions" icon="shield" href="#permissions">
+    Control who accesses and edits your docs.
+  </Card>
+  <Card title="Export/Import" icon="upload" href="#export">
+    Backup or migrate your documentation easily.
+  </Card>
+</Columns>
+
+## Theme and Brand Color Customization
+
+Modify your documentation's appearance through the settings panel. Start by selecting a theme or defining custom styles.
+
+<Steps>
+  <Step title="Access Settings" icon="settings">
+    Navigate to **Space Settings** > **Appearance**.
+  </Step>
+  <Step title="Choose Theme" icon="palette">
+    Select from light, dark, or auto modes.
+  </Step>
+  <Step title="Set Brand Color" icon="droplet">
+    Enter your hex code, such as `#3B82F6` for primary blue.
+  </Step>
+  <Step title="Preview & Save" icon="save">
+    Preview changes and apply them site-wide.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use your brand color `{brandColor: "#3B82F6"}` consistently for buttons, links, and headers to strengthen recognition.
+</Callout>
+
+Configure advanced styles via the `docs.config.json` file:
+
+<CodeGroup tabs="JSON,YAML">
+```json
+{
+  "theme": {
+    "primaryColor": "#3B82F6",
+    "fontFamily": "Inter, sans-serif"
+  },
+  "darkMode": true
+}
+```
+
+```yaml
+theme:
+  primaryColor: "#3B82F6"
+  fontFamily: "Inter, sans-serif"
+darkMode: true
+```
+</CodeGroup>
+
+## User Permissions and Access Control
+
+Define roles to secure your documentation. Assign permissions at the space or page level.
+
+| Role          | View | Edit | Admin | Invite Users |
+|---------------|------|------|-------|--------------|
+| Viewer        | ✅   | ❌   | ❌    | ❌           |
+| Editor        | ✅   | ✅   | ❌    | ❌           |
+| Administrator | ✅   | ✅   | ✅    | ✅           |
+
+<Tabs>
+  <Tab title="Add User" icon="user-plus">
+    1. Go to **Members** tab.
+    2. Enter email and select role.
+    3. Send invite link.
+  </Tab>
+  <Tab title="Page-Level Permissions" icon="lock">
+    Override space settings per page using the page menu.
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Permission Rules" default-open="false">
+  For granular control, use role-based access control (RBAC):
+
+  ```javascript
+  const permissions = {
+    pages: {
+      "/docs/*": ["editor", "admin"],
+      "/admin/*": ["admin"]
+    }
+  };
+  ```
+
+  Integrate with your auth provider for SSO.
+</Expandable>
+
+## Export and Import Options
+
+Export your docs for backups or migration. Supported formats include Markdown, PDF, and ZIP archives.
+
+<Steps>
+  <Step title="Export Space" icon="download">
+    Select **Export** > **Full Space** to download all pages.
+  </Step>
+  <Step title="Import Content" icon="upload">
+    Use **Import** to upload ZIP or Markdown folders.
+  </Step>
+  <Step title="Verify" icon="check-circle">
+    Review imported pages in the preview pane.
+  </Step>
+</Steps>
+
+<Callout kind="info">
+  Exports preserve frontmatter, components, and images. Imports support MDX syntax for seamless migration.
+</Callout>
+
+These configurations make your danny chan Documentation space flexible and secure. Test changes in a staging environment first.

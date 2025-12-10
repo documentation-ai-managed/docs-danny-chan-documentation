@@ -1,0 +1,101 @@
+---
+title: Welcome to Danny Chan Documentation
+description: An overview of the Danny Chan Documentation platform, its purpose, and how it helps you organize and manage project documentation efficiently.
+---
+
+## Overview
+
+Danny Chan Documentation provides a centralized space to create, organize, and publish your project documentation. You build structured docs with Markdown and MDX, collaborate with teams, and deploy changes seamlessly. This platform scales from small projects to enterprise knowledge bases.
+
+<Columns cols={3}>
+  <Card title="Markdown & MDX Support" icon="edit-3" href="/docs/markdown">
+    Write in familiar Markdown with powerful MDX components for interactive docs.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/docs/versions">
+    Track changes, collaborate via Git, and maintain version history effortlessly.
+  </Card>
+  <Card title="Custom Domains" icon="globe" href="/docs/domains">
+    Host on your domain with custom themes matching your brand.
+  </Card>
+</Columns>
+
+## Key Benefits
+
+You gain efficiency through intuitive tools that streamline documentation workflows. Key advantages include real-time previews, search integration, and analytics on doc usage.
+
+<Callout kind="tip">
+  Start small: Create your first page to experience live editing and publishing.
+</Callout>
+
+| Benefit | Description | Impact |
+|---------|-------------|--------|
+| Fast Setup | Deploy in minutes without servers | Save weeks of DevOps time |
+| Team Collaboration | Role-based access and comments | Reduce merge conflicts by 80% |
+| SEO Optimized | Automatic sitemaps and meta tags | Increase organic traffic `<30%` |
+| Mobile Responsive | Themes adapt to all devices | Reach users on any screen |
+
+## Getting Oriented with the Interface
+
+Navigate the dashboard confidently using these steps. You access pages, edit content, and manage settings from a clean sidebar.
+
+<Steps>
+  <Step title="Access Dashboard" icon="layout">
+    Log in at `https://docs.dannychan.com` and select your project.
+  </Step>
+  <Step title="Create Page" icon="plus">
+    Click "New Page" in the sidebar. Choose a title and add frontmatter.
+  </Step>
+  <Step title="Edit & Preview" icon="edit">
+    Use the split view to write Markdown and see live previews.
+  </Step>
+  <Step title="Publish Changes" icon="upload-cloud">
+    Commit via Git or direct publish. View analytics post-deployment.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Editor View" icon="edit-3">
+    The editor supports syntax highlighting for `javascript`, `python`, and more. Insert components like `<Callout>` directly.
+  </Tab>
+  <Tab title="Preview Mode" icon="eye">
+    Toggle full-screen preview to test responsiveness. Check links and embeds.
+  </Tab>
+  <Tab title="Settings Panel" icon="settings">
+    Customize themes, enable search, and configure integrations here.
+  </Tab>
+</Tabs>
+
+## Quick Integration Example
+
+Embed your docs in apps using iframes or APIs. Here's how you fetch doc content.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  const response = await fetch('https://docs.dannychan.com/api/pages/introduction');
+  const pageData = await response.json();
+  console.log(pageData.content);
+  ```
+  ```python
+  import requests
+  response = requests.get('https://docs.dannychan.com/api/pages/introduction')
+  page_data = response.json()
+  print(page_data['content'])
+  ```
+</CodeGroup>
+
+<ExpandableGroup>
+  <Expandable title="Frequently Asked Questions" default-open="true">
+    ## What file formats work?
+    
+    You use `.mdx` for pages with components and `.md` for plain Markdown.
+    
+    ## Can I import from other platforms?
+    
+    Yes, migrate from GitBook or Notion via CSV or GitHub import.
+  </Expandable>
+  <Expandable title="Advanced Customization">
+    Override CSS with custom themes. Set `brandColor: "#3B82F6"` in config.
+  </Expandable>
+</ExpandableGroup>
+
+This setup empowers you to maintain high-quality docs that grow with your projects. Explore features hands-on to maximize productivity.

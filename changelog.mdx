@@ -1,0 +1,145 @@
+---
+title: Changelog
+description: Track the latest updates, new features, and improvements to the Danny Chan Documentation platform.
+---
+
+## Overview
+
+You stay current with the Danny Chan Documentation platform through this changelog. Review recent releases to discover new features, performance improvements, and bug fixes that enhance your documentation workflow. Each release delivers value with clear breakdowns of changes.
+
+<Callout kind="info">
+  Subscribe to our RSS feed or join the Discord community to receive notifications for new releases.
+</Callout>
+
+<Columns cols={3}>
+  <Card title="Latest Release" icon="zap" href="#v1-2-0">
+    v1.2.0 brings real-time collaboration and AI-assisted editing.
+  </Card>
+  <Card title="Key Features" icon="star" href="#features">
+    Explore standout additions across recent versions.
+  </Card>
+  <Card title="Bug Fixes" icon="check-circle" href="#bug-fixes">
+    Reliability improvements you can rely on.
+  </Card>
+</Columns>
+
+## Recent Releases
+
+Check the latest versions below. Each entry details changes to help you upgrade smoothly.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for teams to edit docs simultaneously
+- Introduced AI-powered content suggestions to speed up writing
+- New search indexing for instant full-text results across all pages
+
+## Improvements
+
+- Enhanced performance with 40% faster page loads
+- Updated UI components for better mobile responsiveness
+- Improved version history with diff views
+
+## Bug Fixes
+
+- Fixed markdown rendering issues with nested lists
+- Resolved export failures for large documentation sites
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Custom themes support with your brand colors like `#3B82F6`
+- Integrated analytics dashboard to track page views
+- Embed videos and iframes directly in MDX pages
+
+## Bug Fixes
+
+- Corrected frontmatter parsing errors with special characters
+- Fixed component hydration issues in dynamic tabs
+- Patched security vulnerability in API token handling
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core MDX documentation engine with 15+ components
+- Full support for Steps, Tabs, Cards, and Update blocks
+- Automated deployment previews for pull requests
+
+## Breaking Changes
+
+- Updated attribute syntax to require double quotes only
+- Removed legacy single-quote support in JSX components
+
+## Initial Setup
+
+- First stable release with complete parsing rules
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to update your Danny Chan Documentation instance.
+
+<Steps>
+  <Step title="Backup" icon="database">
+    Create a full backup of your repository.
+
+    ```bash
+    git clone your-repo
+    tar -czf backup.tar.gz docs/
+    ```
+  </Step>
+  <Step title="Update Package" icon="package">
+    Install the latest version using your preferred method.
+  </Step>
+  <Step title="Verify Changes" icon="check-circle">
+    Run tests and preview the site.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="npm" icon="package">
+    ```bash
+    npm install danny-chan-docs@latest
+    npm run build
+    npm start
+    ```
+  </Tab>
+  <Tab title="yarn" icon="package">
+    ```bash
+    yarn add danny-chan-docs@latest
+    yarn build
+    yarn start
+    ```
+  </Tab>
+  <Tab title="Docker" icon="docker">
+    ```bash
+    docker pull danny-chandocs:latest
+    docker run -p 3000:3000 danny-chandocs:latest
+    ```
+  </Tab>
+</Tabs>
+
+## Contribution Guidelines
+
+<ExpandableGroup>
+  <Expandable title="How to Submit a Feature Request" default-open="true">
+    Open an issue on GitHub with detailed specs. Include use cases and mockups.
+  </Expandable>
+  <Expandable title="Reporting Bugs">
+    Provide reproduction steps, browser details, and console errors.
+  </Expandable>
+</ExpandableGroup>
+
+| Version | Date       | Key Changes                  |
+|---------|------------|------------------------------|
+| v1.2.0  | 2024-10-15 | Collaboration, AI features  |
+| v1.1.0  | 2024-09-20 | Themes, analytics            |
+| v1.0.0  | 2024-08-10 | Core engine, components     |

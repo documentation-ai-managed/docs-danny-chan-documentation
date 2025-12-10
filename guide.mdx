@@ -1,0 +1,100 @@
+---
+title: Managing Your Documentation
+description: A step-by-step guide on organizing, editing, and collaborating on project documentation within the platform.
+---
+
+## Overview
+
+You manage your project's documentation efficiently in danny chan Documentation by organizing content into folders, using powerful editing tools, and leveraging collaboration features. This guide walks you through each step to keep your docs structured, up-to-date, and team-ready.
+
+<Callout kind="tip">
+  Start with a clear folder structure to scale your documentation as your project grows.
+</Callout>
+
+## Organize Documents and Folders
+
+Create a logical hierarchy to group related documents. Use folders for categories like API references, user guides, and deployment instructions.
+
+<Steps>
+  <Step title="Create a Folder" icon="folder-plus">
+    Navigate to the root directory. Click the `New Folder` button and name it, such as `api-reference`.
+  </Step>
+  <Step title="Move Documents" icon="move">
+    Select documents from the list. Drag them into your new folder or use the `Move to` option in the context menu.
+  </Step>
+  <Step title="Rename or Delete" icon="edit-3">
+    Right-click a folder. Choose `Rename` for updates or `Delete` to remove (this moves content to trash).
+  </Step>
+</Steps>
+
+| Folder Structure Example | Purpose |
+|--------------------------|---------|
+| `/guides/`              | User tutorials |
+| `/api/`                 | Endpoint docs |
+| `/deployment/`          | Setup instructions |
+| `/changelog/`           | Version history |
+
+## Edit and Format Content
+
+Access rich editing tools for Markdown and MDX. Format text, embed code, and use components seamlessly.
+
+<Tabs>
+  <Tab title="Markdown Editor" icon="edit-3">
+    Write structured content with syntax highlighting.
+    
+    <CodeGroup tabs="JavaScript,Python">
+    ```javascript
+    // Example API call
+    const response = await fetch('/api/users', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: 'User' })
+    });
+    ```
+    ```python
+    # Example API call
+    import requests
+    response = requests.post('/api/users', json={'name': 'User'})
+    ```
+    </CodeGroup>
+  </Tab>
+  <Tab title="Preview Mode" icon="eye">
+    Toggle live preview to see rendered output, including components like `<Callout>` and code blocks.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">
+  Always preview your changes. Components like `{tabs="JavaScript,Python"}` require valid syntax to render correctly.
+</Callout>
+
+## Collaborate with Your Team
+
+Invite teammates and manage permissions to work together in real-time.
+
+<Columns cols={3}>
+  <Card title="Share Documents" icon="share-2" href="#">
+    Generate shareable links with view, edit, or comment access.
+  </Card>
+  <Card title="Add Comments" icon="message-circle" href="#">
+    Highlight text and leave inline feedback. Resolve comments once addressed.
+  </Card>
+  <Card title="Version History" icon="git-branch" href="#">
+    Track changes with diffs. Revert to previous versions if needed.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Permissions" default-open="false">
+
+Set granular roles:
+
+- **Viewer**: Read-only access
+- **Editor**: Modify content
+- **Admin**: Manage folders and users
+
+Use the permissions panel to assign roles per folder.
+
+</Expandable>
+
+## Best Practices
+
+Maintain consistency by enforcing naming conventions like `kebab-case.mdx` for files. Regularly review folders to archive outdated docs. This approach ensures your documentation remains a reliable resource for your team and users.
